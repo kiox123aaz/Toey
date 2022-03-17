@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chalam | Moomin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Profile SK-QTR">
+    <meta name="author" content="SK-QTR">
+    <link rel="icon" href="Arthur.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+
+<meta content="Arthur.jpeg" property="og:image">
+
+<meta content="AA" property="og:site_name">
+
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #161625;
+            font-family: 'Rubik';
+        }
+
+        *::selection {
+            color: #000000;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 5px;
+            background: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #ec6a00;
+            box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+        }
+
+
+        nav {
+            margin: 15px;
+            border-radius: 10px;
+            background-color: #ffa9a9;
+
+        }
+
+        .dropdown-toggle {
+            background-color: #000000;
+        }
+
+        .dropdown-toggle:focus,
+        .dropdown-toggle:active {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+
+        .dropdown-item {
+            background-color: #f04747;
+            border-radius: 5px;
+            width: 90%;
+            margin-left: 5%;
+        }
+
+        .dr-tg {
+            background-color: transparent;
+            border: none;
+        }
+
+        .dr-tg:focus,
+        .dr-tg:hover,
+        .dr-tg:active {
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .btn-custom1 {
+            background-color: #000000;
+            color: #ff0000;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .dropdown-menu {
+            background-color: #000000;
+            margin-left: -12.5px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .dropdown {
+                margin-top: 15px;
+            }
+        }
+
+
+        .alert.alert-info-tall {
+            height: 500px;
+            background-color: #000000;
+            border: 1px solid #ffb4da00;
+            border-radius: 5px;
+        }
+
+
+        .avatar {
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            display:block;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .username {
+            margin: 15px auto 15px auto;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+            bottom:100px;
+        }
+
+        .username strong {
+            color: rgb(255, 0, 0);
+        }
+
+        .username span {
+            color: #005eff;
+            letter-spacing: -1px;
+        }
+
+        .role,
+        .note {
+            padding: 0.5rem 0.5rem 2rem 0.5rem;
+            color: #ff0404;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            bottom:80px;
+        }
+
+        .note .noteheader {
+            padding-bottom: 0.5rem;
+        }
+
+        .note textarea {
+            padding: 0.5rem;
+            resize: none;
+            background: transparent;
+            border: 0;
+            color: #000000;
+            font-size: 10px;
+        }
+
+        .note textarea:hover {
+            background: #000000;
+        }
+
+        .message {
+            padding: 0.5rem;
+            border-top: 1px solid #000000;
+        }
+
+        .message input {
+            width: 100%;
+            border: 1px solid #000000;
+            background: #000000;
+            padding: 0.5rem;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 12px;
+        }
+
+        .tip {
+            font-size: 10px;
+            padding: 0.2rem 0.5rem;
+        }
+
+        .tip strong {
+            color: rgb(0, 0, 0);
+        }
+
+        .tip span {
+            color: #000000;
+        }
+
+
+
+
+        .flex-1O1GKY {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .alignCenter-1dQNNs {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .justifyCenter-3D2jYp {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .wrap-ZIn9Iy {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .marginBottom8-AtZOdT {
+            margin-bottom: 8px;
+        }
+
+
+        .root-3-B5F3 {
+            position: relative;
+            margin-top: 2px;
+        }
+
+        .role-2irmRk {
+            font-size: 16.5px;
+            font-weight: 500;
+            border: 1px solid;
+            border-radius: 11px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 25px;
+            margin: 0 4px 4px 0;
+            padding: 4px;
+        }
+
+        .roleCircle-3xAZ1j {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            padding: 0;
+            margin-right: 4px;
+        }
+
+        .roleRemoveIcon-2-TeGW {
+            display: none;
+            width: 10px;
+            height: 10px;
+        }
+
+        .role-2irmRk:hover .roleRemoveIcon-2-TeGW {
+            display: block;
+        }
+
+        .roleName-32vpEy {
+            max-width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-right: 4px;
+        }
+
+        .rolesList-22qj2L {
+            margin-top: 12px;
+        }
+
+        button#five {
+            background: rgba(255, 255, 255, 0);
+            border: 2.5px solid #ffffff;
+            border-radius: 10px;
+            color: rgb(255, 250, 250);
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            transition: all .5s ease;
+            width: 95%;
+            padding: 5px;
+            margin-top: 15px;
+            display: block;
+            margin-left: 10px;
+        }
+              button#five:hover {
+            background: #e0dfdf;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+       <nav class="navbar navbar-expand-sm bg-element rounded-4 navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">เต้ยโสดนะ จีบได้5555</a>
+
+ 
+    </nav>
+    <hr style="height:2px;border-width:0;color:rgb(252, 252, 252);backgrounrgb(0, 0, 0)lor:gray;margin: 15px;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-info alert-info-tall" style="border-top: 50px solid #1b1b30;">
+                       <center>
+                           
+                            <div class="avatar">
+                                <img src="Arthur.jpeg" />
+                            </div>
+                            <div style="width: 100px; height: 100px; background-color: transparent; position: relative; bottom:100px;"></div>
+                        
+
+                    </center>
+                            <div class="username">
+                                <span><strong>Chalam</strong>#2130</span><br>
+                               
+                            </div>
+                            <div class="note">
+                                <div class="noteheader">
+                                    <span><strong>แนะนำตัว</strong></span>
+                                </div>
+                                ผมชื่อ เต้ย หรือ ฉาหลาม  <br>
+                                ผมอายุ 16 ปี  <br> 
+                                และผมเป็นคนพัฒนาบอท Moomin Bot <br>
+                            </div>
+                            <div class="role">
+                                <span><strong>สถานะ</strong></span>
+
+
+                                <div class="endBodySection-Rf4s-7 flex-1O1GKY rolesList-22qj2L root-3-B5F3 wrap-ZIn9Iy"
+                                    aria-label="Roles" role="list" tabindex="0"
+                                    data-list-id="roles-a0f4caa3-a4f9-4d04-8dad-981594215d42"
+                                    aria-orientation="vertical">
+
+
+                                    <div class="alignCenter-1dQNNs flex-1O1GKY role-2irmRk"
+                                        aria-label="Remove role Staff" tabindex="-1" role="option"
+                                        data-list-item-id="roles-a0f4caa3-a4f9-4d04-8dad-981594215d42___754119034412466197"
+                                        aria-selected="false" style="border-color: rgba(255, 0, 0, 0.6);">
+                                        <div class="alignCenter-1dQNNs flex-1O1GKY justifyCenter-3D2jYp roleCircle-3xAZ1j"
+                                            tabindex="-1" aria-hidden="true" role="button"
+                                            style="background-color: rgb(0, 0, 0);"><svg
+                                                class="roleRemoveIcon-2-TeGW" aria-hidden="true" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="#2f3136"
+                                                    d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z">
+                                                </path>
+                                            </svg></div>
+                                        <div aria-hidden="true" class="roleName-32vpEy"
+                                            style="color:rgb(255, 0, 0);">เต้ยโสดนะ</div>
+                                    </div>
+
+           
+
+                            
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="alert alert-info alert-info-tall" style="border-top: 50px solid #1b1b30;">
+                            <spam style="font-size: 35px;color:#eee;margin-top:-65px;position: absolute;"><strong>Links 🔗</strong></spam>
+                            <div class="Link" style="max-height: 425px;overflow: auto;">
+
+                                <div class="row no-gutters"
+                                    style="margin-top:10px;margin-left:auto;margin-right:5px;display: block;">
+                                    <div class="col-12"
+                                        style="background-color: #14142b;height: 130px;border-radius: 5px;">
+                                       
+                                        <spam style="color:rgb(30, 71, 255);font-size:25px;margin-left:10px;"><img src="images/discord-icon-png-4.png" height="50px" style="margin-right:5px;">Discord</spam>
+                                        <a href="https://discord.com/users/852727096505270323"
+                                            style="text-decoration: none;" target="_blank"><button id="five">My
+                                                Discord</button></a>
+                                    </div>
+                                </div>
+
+                                <div class="row no-gutters"
+                                    style="margin-top:20px;margin-left:auto;margin-right:5px;display: block;">
+                                    <div class="col-12"
+                                        style="background-color: #14142b;height: 185px;border-radius: 5px;">
+                                       
+                                        <spam style="color:rgb(255, 0, 0);font-size:25px;margin-left:10px;"><img src="images/62372-computer-neon-instagram-icons-hd-image-free-png.png" style="margin-right:5px; margin-top:5px;" height="50px">facebook</spam>
+                                        <a href="https://www.facebook.com/profile.php?id=100016585352215" style="text-decoration: none;"
+                                            target="_blank"><button id="five">ลิ้ง facebook</button></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+<div class="row no-gutters"
+style="margin-top:20px;margin-left:auto;margin-right:5px;display: block;">
+<div class="col-12"
+style="background-color: #14142b;height: 130px;border-radius: 5px;">
+
+<spam style="color:rgb(247, 191, 247);font-size:25px; position:relavtie; right :25px;"><img src="images/image-removebg-preview (1).png" height="75px" style="position:relative; right:5px;">My BOT</spam>
+<a href="https://discord.com/api/oauth2/authorize?client_id=949141434538274826&permissions=8&scope=bot%20applications.commands" style="text-decoration: none;"
+    target="_blank"><button id="five" style="position:relative; bottom:5px;">ลิ้งเชิญ Moomin</button></a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script>
+        const btnCredits = document.getElementById("creditsbtn")
+        const btnCreditsClose = document.getElementById("overlay-close")
+        if (btnCredits) {
+            btnCredits.addEventListener("click", () => {
+                document.getElementById("overlay").style.display = "block";
+            })
+        }
+        if (btnCreditsClose) {
+            btnCreditsClose.addEventListener("click", () => {
+                document.getElementById("overlay").style.display = "none";
+            })
+        }
+
+    </script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
